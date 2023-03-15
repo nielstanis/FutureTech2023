@@ -3,8 +3,6 @@ Console.WriteLine("Hello, FutureTech 2023!");
 
 Directory.CreateDirectory("log");
 Wasmtime.WasiConfiguration conf = new Wasmtime.WasiConfiguration()
-    .WithPreopenedDirectory("/etc","/etc")
-    .WithPreopenedDirectory(".",".")
     .WithStandardError("log/error.log")
     .WithStandardOutput("log/output.log")
     .WithArg("CalledFromConsole")
